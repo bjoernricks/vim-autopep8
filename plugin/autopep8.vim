@@ -6,8 +6,9 @@ import os
 import sys
 import vim
 
-sys.path.insert(0, os.path.join(vim.eval('expand("<sfile>:p:h:h")'),
-                                'autopep8'))
+f_path = vim.eval('expand("<sfile>:p:h:h")')
+sys.path.insert(0, os.path.join(f_path, 'autopep8'))
+sys.path.insert(0, os.path.join(f_path, 'pep8'))
 
 try:
     import autopep8
