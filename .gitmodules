@@ -1,3 +1,6 @@
 [submodule "autopep8"]
 	path = autopep8
 	url = https://github.com/hhatto/autopep8.git
+[submodule "pep8"]
+	path = pep8
+	url = https://github.com/jcrocholl/pep8.git
