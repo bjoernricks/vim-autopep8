@@ -15,22 +15,19 @@ autopep8 python script in $PATH.
 Installation
 ------------
 
-Please use pathogen_ to install vim-autopep8 as a bundle
+Please use pathogen_ to install vim-autopep8 as a bundle::
 
-::
     cd ~/.vim/bundle
     git clone https://github.com/bjoernricks/vim-autopep8.git
 
 .. _pathogen: https://github.com/tpope/vim-pathogen
 
-Either install autopep8_ via pip
+Either install autopep8_ via pip::
 
-::
    pip install autopep8
 
-or run
+or run::
 
-::
    cd ~/.vim/bundle/vim-autopep8.git
    git submodule update --init
 
