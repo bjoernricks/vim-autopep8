@@ -16,8 +16,8 @@ try:
     def autopep8lines(lines):
         encoding = vim.eval("&fileencoding")
 
-        orig = "\n".join([line.decode(encoding) for line in lines])
-        peped = autopep8.fix_string(orig)
+        orig = [line.decode(encoding) for line in lines]
+        peped = autopep8.fix_lines(orig, autopep8.parse_args([""]))
 
         if peped.endswith('\n'):
             peped = peped[:-1]
