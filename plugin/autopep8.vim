@@ -15,9 +15,12 @@ try:
 
     def autopep8lines(lines):
         encoding = vim.eval("&fileencoding")
+        tw = vim.eval("&textwidth")
+
+        args = ["--max-line-length", tw]
 
         orig = [line.decode(encoding) for line in lines]
-        peped = autopep8.fix_lines(orig, autopep8.parse_args([""]))
+        peped = autopep8.fix_lines(orig, autopep8.parse_args(args))
 
         if peped.endswith('\n'):
             peped = peped[:-1]
